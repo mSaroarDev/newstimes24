@@ -1,0 +1,13 @@
+Please take a note of the details below these are needed to access your account.
+Your account is now active.
+
+Control panel username:	b14_35265014
+Control panel password:	_6RcKb6YqEu#*4B
+Control panel URL:	cpanel.byethost14.com
+MySQL username	b14_35265014
+MySQL password:	_6RcKb6YqEu#*4B
+MySQL hostname:	sql300.byethost14.com
+FTP username:	b14_35265014
+FTP password:	_6RcKb6YqEu#*4B
+FTP host name:	ftp.byethost14.com
+Your Website URL:	http://newstimes.byethost14.com
