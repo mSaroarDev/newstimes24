@@ -52,7 +52,7 @@ export default function Navbar() {
                 </li>
                 {categories.map((category) => (
                   <li key={category.id}>
-                    <Link href={`/category/${category.id}`}>{category.category_name}</Link>
+                    <Link href={`/posts/category/${category.id}`}>{category.category_name}</Link>
                   </li>
                 ))}
                 {/* <li>
@@ -85,7 +85,7 @@ export default function Navbar() {
               </svg>
             </button>
             <button className="btn btn-ghost btn-circle flex items-center">
-              <Link href={"/login"}>
+              <Link href={"/admin/dashboard"}>
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"

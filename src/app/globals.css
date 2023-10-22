@@ -5,3 +5,12 @@
 .admin__links {
   @apply flex gap-3 items-center justify-start text-sm p-4 hover:bg-[#494949] border-s-2 border-[#292929] hover:border-brandColor duration-300;
 }
+
+.Toastify__toast-container--top-right {
+  top: 80px;
+  right: 1em;
+}
+
+main{
+  @apply w-full max-w-6xl mx-auto;
+}

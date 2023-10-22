@@ -1,10 +1,30 @@
 import Image from "next/image";
 import thumnail from '../../public/new-img.jpg'
+import Link from "next/link";
+import CategoriesById from "@/utils/categorybyid";
 
-export default function NewsCard({data}) {
+export default async function NewsCard({data}) {
+  
+  const category = await CategoriesById(data.category_id);
+
+  // post date format
+  const date = data.created_at;
+  const Localdate = new Date(date);
+  const options = {
+    year: "numeric",
+    month: "short", // "short" gives you the abbreviated month name
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true, // Use 12-hour time format
+  };
+  const formattedDate = Localdate.toLocaleString("en-US", options);
+
+
   return (
     <>
-      <div className="card w-96 md:w-80 bg-base-100 shadow-xl">
+      <div className="card w-96 md:w-80 bg-base-100 shadow-xl overflow-hidden">
+        <Link href={`/posts/${data.id}`}>
         <figure>
           <Image className="w-full md:w-80"
             src={data.featured_image}
@@ -21,8 +41,9 @@ export default function NewsCard({data}) {
             {data.post_excerpt}
           </p>
           <hr />
-          <div className="post__meta text-sm card-actions justify-end">Bangladesh • 14 Oct, 2023</div>
+          <div className="post__meta text-sm card-actions justify-end">{category.category_name} • {formattedDate}</div>
         </div>
+        </Link>
       </div>
     </>
   );

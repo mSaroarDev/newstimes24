@@ -27,9 +27,9 @@ export default function AdminNavbar() {
           <Link href={"/admin/categories"} className="admin__links">
             <PiFolderNotchOpenDuotone /> All Categories
           </Link>
-          <Link href={"/admin/comments"} className="admin__links">
+          {/* <Link href={"/admin/comments"} className="admin__links">
             <BiMessageSquareDetail /> All Comments
-          </Link>
+          </Link> */}
           <LogoutButton />
           {/* <Link href={"/admin/new-post"} className="admin__links">
             <HiOutlineDocumentPlus /> Create New Post

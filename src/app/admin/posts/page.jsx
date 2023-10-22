@@ -2,8 +2,13 @@ import Link from 'next/link';
 import {HiOutlineDocumentDuplicate} from 'react-icons/hi2';
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import AdminNews from '@/components/AdminNews';
+import AllPosts from '@/components/AllNews';
+import { FetchAllPosts } from '@/utils/posts';
 
-export default function Posts() {
+export default async function Posts() {
+
+  const posts = await FetchAllPosts()
+
   return (
     <>
       <div className="site__summary">
@@ -14,11 +19,12 @@ export default function Posts() {
         <hr />
 
         <div className="admin__news__cards gap-5 w-full mt-10">
-          <AdminNews />
-          <AdminNews />
-          <AdminNews />
-          <AdminNews />
-          <AdminNews />
+
+          {
+            posts && posts.map((post) => {
+              return <AdminNews key={posts.id} post={post}/>
+            })
+          }
 
       </div>
       </div>

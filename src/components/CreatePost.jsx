@@ -94,7 +94,6 @@ export default function CreatePost({ userId }) {
           resetForm();
           // setPostContent("");
           // setSelectedImage(null)
-          window.location.reload(false)
         }
       } catch (err) {
         showError("Something is wrong!")
